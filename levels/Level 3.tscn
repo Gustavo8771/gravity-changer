@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://levels/Level 1.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/portal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/ambientação_azulada.tscn" type="PackedScene" id=5]
+
+[node name="Level 3" type="Node2D"]
+
+[node name="tilemap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 4
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 131071, 0, 0, 65544, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 196607, 0, 0, 131088, 0, 0, 131089, 0, 0, 131090, 0, 0, 131091, 0, 0, 131092, 0, 0, 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 131097, 0, 0, 131098, 0, 0, 131099, 0, 0, 131100, 0, 0, 131101, 0, 0, 131102, 0, 0, 131103, 0, 0, 131104, 0, 0, 131105, 0, 0, 131106, 0, 0, 131107, 0, 0, 131108, 0, 0, 131109, 0, 0, 131110, 0, 0, 131111, 0, 0, 131112, 0, 0, 131113, 0, 0, 131114, 0, 0, 262143, 0, 0, 196628, 0, 0, 196650, 0, 0, 327679, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262164, 0, 0, 262186, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327706, 0, 0, 327719, 0, 0, 327720, 0, 0, 327721, 0, 0, 327722, 0, 0, 393229, 0, 0, 393230, 0, 0, 393242, 0, 0, 393258, 0, 0, 458766, 0, 0, 458767, 0, 0, 458778, 0, 0, 458794, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0, 524323, 0, 0, 524324, 0, 0, 524325, 0, 0, 524326, 0, 0, 524330, 0, 0, 589862, 0, 0, 589866, 0, 0, 655398, 0, 0, 655402, 0, 0, 720934, 0, 0, 720938, 0, 0, 786470, 0, 0, 786474, 0, 0, 852006, 0, 0, 852010, 0, 0, 917540, 0, 0, 917541, 0, 0, 917542, 0, 0, 917546, 0, 0, 983073, 0, 0, 983074, 0, 0, 983075, 0, 0, 983076, 0, 0, 983082, 0, 0, 1048618, 0, 0, 1114154, 0, 0, 1179690, 0, 0, 1245217, 0, 0, 1245218, 0, 0, 1245219, 0, 0, 1245220, 0, 0, 1245221, 0, 0, 1245222, 0, 0, 1245223, 0, 0, 1245224, 0, 0, 1245225, 0, 0, 1245226, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 38, 52 )
+
+[node name="Spike" parent="." instance=ExtResource( 3 )]
+position = Vector2( 658, 292 )
+
+[node name="Spike2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 404, 116 )
+
+[node name="Spike3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 307, 60 )
+rotation = 3.14159
+
+[node name="Spike4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 13, 28 )
+rotation = 3.14159
+
+[node name="portal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 538, 280 )
+path = "res://levels/Level 4.tscn"
+
+[node name="ambientação_azulada" parent="." instance=ExtResource( 5 )]

@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://levels/Level 1.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Ball_Trap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/trap_atiradora.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/portal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/die_zone.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/ambientação_azulada.tscn" type="PackedScene" id=8]
+
+[node name="Level 7" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="tilemap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, 65535, 0, 0, 10, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, 34, 0, 0, 131071, 0, 0, 65546, 0, 0, 65570, 0, 0, 196607, 0, 0, 131082, 0, 0, 131106, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196618, 0, 0, 196642, 0, 0, 327679, 0, 0, 262154, 0, 0, 262178, 0, 0, 393215, 0, 0, 327690, 0, 0, 327714, 0, 0, 458751, 0, 0, 393226, 0, 0, 393250, 0, 0, 524287, 0, 0, 458762, 0, 0, 458786, 0, 0, 589823, 0, 0, 524298, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0, 655359, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589846, 0, 0, 720895, 0, 0, 655382, 0, 0, 786431, 0, 0, 720918, 0, 0, 851967, 0, 0, 786454, 0, 0, 917503, 0, 0, 851990, 0, 0, 983039, 0, 0, 917526, 0, 0, 1048575, 0, 0, 983062, 0, 0, 1114111, 0, 0, 1048598, 0, 0, 1179647, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1245183, 0, 0, 1179662, 0, 0, 1310719, 0, 0, 1245198, 0, 0, 1376255, 0, 0, 1310734, 0, 0, 1376270, 0, 0, 1441806, 0, 0 )
+
+[node name="Spike" parent="." instance=ExtResource( 2 )]
+position = Vector2( 146, 133 )
+
+[node name="Spike2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 133 )
+
+[node name="Spike3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 94, 133 )
+
+[node name="Spike5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 339, 260 )
+
+[node name="Spike6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 312, 260 )
+
+[node name="Spike7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 285, 260 )
+
+[node name="Spike8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 258, 260 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 25, 31 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 360, 180 )
+current = true
+
+[node name="Spike4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 172 )
+rotation = 3.14159
+
+[node name="Ball_Trap2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 19, 279 )
+direction = -1
+
+[node name="trap_atiradora" parent="." instance=ExtResource( 5 )]
+position = Vector2( 404, 116 )
+
+[node name="portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 531, 115 )
+path = "res://levels/Level 8.tscn"
+
+[node name="die_zone" parent="." instance=ExtResource( 7 )]
+position = Vector2( 215, -10 )
+
+[node name="die_zone2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 181, 373 )
+
+[node name="die_zone3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 90, 373 )
+
+[node name="die_zone4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3, 357 )
+
+[node name="ambientação_azulada" parent="." instance=ExtResource( 8 )]

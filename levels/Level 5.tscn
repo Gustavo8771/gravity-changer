@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://levels/Level 1.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/Ball_Trap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/portal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/ambientação_azulada.tscn" type="PackedScene" id=5]
+
+[node name="Level 5" type="Node2D"]
+
+[node name="tilemap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 4
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, 65535, 0, 0, 18, 0, 0, 131071, 0, 0, 65554, 0, 0, 196607, 0, 0, 131090, 0, 0, 262143, 0, 0, 196626, 0, 0, 327679, 0, 0, 262162, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327698, 0, 0, 393226, 0, 0, 393234, 0, 0, 458762, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458776, 0, 0, 458777, 0, 0, 458778, 0, 0, 458779, 0, 0, 458780, 0, 0, 458781, 0, 0, 524298, 0, 0, 589834, 0, 0, 655370, 0, 0, 655382, 0, 0, 655388, 0, 0, 655389, 0, 0, 720906, 0, 0, 720918, 0, 0, 720924, 0, 0, 786442, 0, 0, 786454, 0, 0, 786460, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 851996, 0, 0 )
+
+[node name="Player" parent="tilemap" instance=ExtResource( 3 )]
+position = Vector2( 51, 37 )
+
+[node name="Ball_Trap" parent="." instance=ExtResource( 2 )]
+position = Vector2( 208, 108 )
+direction = -1
+
+[node name="portal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 466, 144 )
+path = "res://levels/Level 6.tscn"
+
+[node name="ambientação_azulada" parent="." instance=ExtResource( 5 )]

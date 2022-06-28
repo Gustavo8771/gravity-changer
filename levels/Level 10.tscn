@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://levels/Level 1.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/die_zone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/ambientação_azulada.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/FirstBoss.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/Level 10.gd" type="Script" id=6]
+[ext_resource path="res://scenes/trap_atiradora.tscn" type="PackedScene" id=7]
+
+[node name="Level 10" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="tilemap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 4
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( 65535, -1073741824, 0, 45, -1073741824, 0, 131071, -1073741824, 0, 65581, -1073741824, 0, 196607, -1073741824, 0, 131117, -1073741824, 0, 262143, -1073741824, 0, 196618, -1073741824, 0, 196619, -1073741824, 0, 196620, -1073741824, 0, 196653, -1073741824, 0, 327679, -1073741824, 0, 262189, -1073741824, 0, 393215, -1073741824, 0, 327704, -1073741824, 0, 327705, -1073741824, 0, 327706, -1073741824, 0, 327707, -1073741824, 0, 327708, -1073741824, 0, 327709, -1073741824, 0, 327710, -1073741824, 0, 327711, -1073741824, 0, 327725, -1073741824, 0, 458751, -1073741824, 0, 393261, -1073741824, 0, 524287, -1073741824, 0, 458797, -1073741824, 0, 589823, -1073741824, 0, 524333, -1073741824, 0, 655359, -1073741824, 0, 589869, -1073741824, 0, 720895, -1073741824, 0, 655405, -1073741824, 0, 786431, -1073741824, 0, 720941, -1073741824, 0, 851967, -1073741824, 0, 786452, -1073741824, 0, 786453, -1073741824, 0, 786454, -1073741824, 0, 786455, -1073741824, 0, 786477, -1073741824, 0, 917503, -1073741824, 0, 851974, -1073741824, 0, 851975, -1073741824, 0, 851976, -1073741824, 0, 851977, -1073741824, 0, 851978, -1073741824, 0, 851979, -1073741824, 0, 851980, -1073741824, 0, 852013, -1073741824, 0, 983039, -1073741824, 0, 917538, -1073741824, 0, 917539, -1073741824, 0, 917540, -1073741824, 0, 917541, -1073741824, 0, 917542, -1073741824, 0, 917543, -1073741824, 0, 917544, -1073741824, 0, 917549, -1073741824, 0, 1048575, -1073741824, 0, 983085, -1073741824, 0, 1114111, -1073741824, 0, 1048621, -1073741824, 0, 1179647, -1073741824, 0, 1114157, -1073741824, 0, 1245183, -1073741824, 0, 1179693, -1073741824, 0, 1310719, -1073741824, 0, 1245229, -1073741824, 0, 1376255, -1073741824, 0, 1310765, -1073741824, 0, 1376256, -1073741824, 0, 1376257, -1073741824, 0, 1376258, -1073741824, 0, 1376259, -1073741824, 0, 1376260, -1073741824, 0, 1376261, -1073741824, 0, 1376262, -1073741824, 0, 1376263, -1073741824, 0, 1376264, -1073741824, 0, 1376265, -1073741824, 0, 1376266, -1073741824, 0, 1376267, -1073741824, 0, 1376268, -1073741824, 0, 1376269, -1073741824, 0, 1376270, -1073741824, 0, 1376271, -1073741824, 0, 1376272, -1073741824, 0, 1376273, -1073741824, 0, 1376274, -1073741824, 0, 1376275, -1073741824, 0, 1376276, -1073741824, 0, 1376277, -1073741824, 0, 1376278, -1073741824, 0, 1376279, -1073741824, 0, 1376280, -1073741824, 0, 1376281, -1073741824, 0, 1376282, -1073741824, 0, 1376283, -1073741824, 0, 1376284, -1073741824, 0, 1376285, -1073741824, 0, 1376286, -1073741824, 0, 1376287, -1073741824, 0, 1376288, -1073741824, 0, 1376289, -1073741824, 0, 1376290, -1073741824, 0, 1376291, -1073741824, 0, 1376292, -1073741824, 0, 1376293, -1073741824, 0, 1376294, -1073741824, 0, 1376295, -1073741824, 0, 1376296, -1073741824, 0, 1376297, -1073741824, 0, 1376298, -1073741824, 0, 1376299, -1073741824, 0, 1376300, -1073741824, 0, 1376301, -1073741824, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 35, 29 )
+
+[node name="ambientação_azulada" parent="." instance=ExtResource( 3 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 362, 182 )
+current = true
+
+[node name="die_zones" type="Node2D" parent="."]
+position = Vector2( -3, -35 )
+
+[node name="die_zone" parent="die_zones" instance=ExtResource( 2 )]
+position = Vector2( 46, -12 )
+
+[node name="die_zone2" parent="die_zones" instance=ExtResource( 2 )]
+position = Vector2( 131, -12 )
+
+[node name="die_zone3" parent="die_zones" instance=ExtResource( 2 )]
+position = Vector2( 219, -11 )
+
+[node name="die_zone4" parent="die_zones" instance=ExtResource( 2 )]
+position = Vector2( 308, -12 )
+
+[node name="die_zone5" parent="die_zones" instance=ExtResource( 2 )]
+position = Vector2( 396, -13 )
+
+[node name="die_zone6" parent="die_zones" instance=ExtResource( 2 )]
+position = Vector2( 489, -13 )
+
+[node name="die_zone7" parent="die_zones" instance=ExtResource( 2 )]
+position = Vector2( 578, -14 )
+
+[node name="die_zone8" parent="die_zones" instance=ExtResource( 2 )]
+position = Vector2( 668, -16 )
+
+[node name="FirstBoss" parent="." instance=ExtResource( 5 )]
+position = Vector2( 361, 132 )
+
+[node name="beat_boss" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="portal_position" type="Position2D" parent="."]
+position = Vector2( 265, 125 )
+
+[node name="trap_atiradora" parent="." instance=ExtResource( 7 )]
+position = Vector2( 708, 153 )
+
+[connection signal="timeout" from="beat_boss" to="." method="_on_beat_boss_timeout"]

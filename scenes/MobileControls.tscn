@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/left.png" type="Texture" id=1]
+[ext_resource path="res://assets/jump.png" type="Texture" id=2]
+[ext_resource path="res://assets/right.png" type="Texture" id=3]
+
+[node name="MobileControls" type="CanvasLayer"]
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2( 8, 255 )
+scale = Vector2( 6, 6 )
+normal = ExtResource( 1 )
+passby_press = true
+action = "left"
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2( 129, 257 )
+scale = Vector2( 6, 6 )
+normal = ExtResource( 3 )
+passby_press = true
+action = "right"
+
+[node name="jump" type="TouchScreenButton" parent="."]
+position = Vector2( 618, 257 )
+scale = Vector2( 6, 6 )
+normal = ExtResource( 2 )
+passby_press = true
+action = "change_gravity"
