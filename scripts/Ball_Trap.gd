@@ -14,5 +14,4 @@ func _physics_process(_delta: float) -> void:
 
 func _on_collision_body_entered(body: Node) -> void:
 	if body.name == "Player":
-		if get_tree().reload_current_scene() != OK:
-			print("Algo deu errado!")
+		body.die()

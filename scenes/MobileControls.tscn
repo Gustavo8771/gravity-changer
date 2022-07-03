@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/left.png" type="Texture" id=1]
 [ext_resource path="res://assets/jump.png" type="Texture" id=2]
 [ext_resource path="res://assets/right.png" type="Texture" id=3]
+[ext_resource path="res://assets/pause.png" type="Texture" id=4]
 
 [node name="MobileControls" type="CanvasLayer"]
 
@@ -26,3 +27,9 @@ scale = Vector2( 6, 6 )
 normal = ExtResource( 2 )
 passby_press = true
 action = "change_gravity"
+
+[node name="pause" type="TouchScreenButton" parent="."]
+position = Vector2( 658, 2 )
+scale = Vector2( 4, 4 )
+normal = ExtResource( 4 )
+action = "pause"

@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://levels/Level 1.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/ambientação_azulada.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/trap_atiradora.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/portal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Star.tscn" type="PackedScene" id=7]
+
+[node name="Level 15" type="Node2D"]
+
+[node name="ambientação_azulada" parent="." instance=ExtResource( 2 )]
+
+[node name="tilemap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65518, 0, 0, -65517, 0, 0, -65516, 0, 0, -65515, 0, 0, -65514, 0, 0, -65513, 0, 0, -65512, 0, 0, -65511, 0, 0, 65535, 0, 0, 25, 0, 0, 131071, 0, 0, 65561, 0, 0, 196607, 0, 0, 131097, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 196626, 0, 0, 196627, 0, 0, 196630, 0, 0, 196631, 0, 0, 196632, 0, 0, 196633, 0, 0, 262163, 0, 0, 262166, 0, 0, 327699, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327706, 0, 0, 327707, 0, 0, 327708, 0, 0, 327709, 0, 0, 393235, 0, 0, 393245, 0, 0, 458771, 0, 0, 458781, 0, 0, 524307, 0, 0, 524317, 0, 0, 589843, 0, 0, 589853, 0, 0, 655379, 0, 0, 655380, 0, 0, 655381, 0, 0, 655382, 0, 0, 655383, 0, 0, 655384, 0, 0, 655385, 0, 0, 655386, 0, 0, 655387, 0, 0, 655388, 0, 0, 655389, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 13, 14 )
+
+[node name="trap_atiradora" parent="." instance=ExtResource( 4 )]
+position = Vector2( 388, 12 )
+timer_tiro_duration = 0.75
+
+[node name="trap_atiradora2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 392, 40 )
+scale = Vector2( 1, 1 )
+timer_tiro_duration = 2.0
+
+[node name="Spike" parent="." instance=ExtResource( 5 )]
+position = Vector2( 333, 148 )
+
+[node name="Spike2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 359, 148 )
+
+[node name="Spike3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 385, 148 )
+
+[node name="Spike4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 411, 148 )
+
+[node name="portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 447, 129 )
+path = "res://levels/Level 16.tscn"
+
+[node name="Star" parent="." instance=ExtResource( 7 )]
+position = Vector2( 393, 8 )

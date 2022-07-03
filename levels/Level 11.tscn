@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://levels/Level 1.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/ambientação_azulada.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://scripts/Level 11.gd" type="Script" id=5]
 [ext_resource path="res://scenes/area_troll_1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 364, 10 )
 
 [node name="Level 11" type="Node2D"]
 script = ExtResource( 5 )
@@ -39,8 +42,24 @@ position = Vector2( 84, 75 )
 [node name="Spike" parent="." instance=ExtResource( 7 )]
 position = Vector2( 385, 244 )
 
+[node name="troll" type="Position2D" parent="."]
+position = Vector2( 360, 180 )
+
+[node name="timer_pos_jumpscare" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="proxima_cena" type="Area2D" parent="."]
+position = Vector2( 336, 503 )
+
+[node name="collision" type="CollisionShape2D" parent="proxima_cena"]
+position = Vector2( 32, 6 )
+shape = SubResource( 1 )
+
 [connection signal="body_entered" from="area_troll_1" to="." method="_on_area_troll_1_body_entered"]
 [connection signal="body_entered" from="area_troll_2" to="." method="_on_area_troll_2_body_entered"]
+[connection signal="timeout" from="timer_pos_jumpscare" to="." method="_on_timer_pos_jumpscare_timeout"]
+[connection signal="body_entered" from="proxima_cena" to="." method="_on_proxima_cena_body_entered"]
 
 [editable path="area_troll_1"]
 [editable path="area_troll_2"]

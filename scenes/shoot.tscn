@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/square.png" type="Texture" id=1]
 [ext_resource path="res://scripts/shoot.gd" type="Script" id=2]
@@ -11,6 +11,14 @@ extents = Vector2( 4, 4 )
 
 [sub_resource type="OccluderPolygon2D" id=3]
 polygon = PoolVector2Array( -7.9292, -8.15323, 8.07922, -8.15323, 7.93994, 8.20313, -8.13806, 8.13348 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 4.0
 
 [node name="shoot" type="KinematicBody2D"]
 position = Vector2( 413, 162 )
@@ -37,6 +45,19 @@ shape = SubResource( 2 )
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource( 3 )
 
+[node name="collisionFx" type="Particles2D" parent="."]
+position = Vector2( -4.1106, 0 )
+emitting = false
+lifetime = 0.4
+one_shot = true
+randomness = 0.5
+fract_delta = false
+process_material = SubResource( 4 )
+
+[node name="timer_morte" type="Timer" parent="."]
+wait_time = 0.6
+
 [connection signal="area_entered" from="shoot" to="." method="_on_shoot_area_entered"]
 [connection signal="body_entered" from="shoot" to="." method="_on_shoot_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="timeout" from="timer_morte" to="." method="_on_timer_morte_timeout"]

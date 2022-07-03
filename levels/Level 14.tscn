@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://levels/Level 1.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/vespa_inimigo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/ambientação_azulada.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Spike.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Ball_Trap.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/portal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Star.tscn" type="PackedScene" id=8]
+
+[node name="Level 14" type="Node2D"]
+
+[node name="tilemap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, 65535, 0, 0, 17, 0, 0, 131071, 0, 0, 65553, 0, 0, 196607, 0, 0, 131089, 0, 0, 262143, 0, 0, 196625, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262157, 0, 0, 262158, 0, 0, 262161, 0, 0, 393215, 0, 0, 327697, 0, 0, 458751, 0, 0, 393233, 0, 0, 524287, 0, 0, 458769, 0, 0, 589823, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524305, 0, 0, 655359, 0, 0, 589841, 0, 0, 720895, 0, 0, 655377, 0, 0, 786431, 0, 0, 720913, 0, 0, 851967, 0, 0, 786449, 0, 0, 917503, 0, 0, 851984, 0, 0, 851985, 0, 0, 983039, 0, 0, 983040, 0, 0, 1048577, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0 )
+
+[node name="vespa_inimigo" parent="." instance=ExtResource( 3 )]
+position = Vector2( 258, 31 )
+speed = 6000
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 35, 30 )
+
+[node name="ambientação_azulada" parent="." instance=ExtResource( 4 )]
+
+[node name="Spike" parent="." instance=ExtResource( 5 )]
+position = Vector2( 99, 92 )
+rotation = 3.14159
+
+[node name="Spike2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 73, 92 )
+rotation = 3.14159
+
+[node name="Spike3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 179, 116 )
+
+[node name="vespa_inimigo2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9, 111 )
+
+[node name="Ball_Trap" parent="." instance=ExtResource( 6 )]
+position = Vector2( 242, 216 )
+
+[node name="Spike4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 179, 156 )
+rotation = 3.14159
+
+[node name="Spike5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 125, 156 )
+rotation = 3.14159
+
+[node name="Spike6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 125, 116 )
+
+[node name="portal" parent="." instance=ExtResource( 7 )]
+position = Vector2( 27, 246 )
+path = "res://levels/Level 15.tscn"
+
+[node name="Star" parent="." instance=ExtResource( 8 )]
+position = Vector2( 151, 154 )

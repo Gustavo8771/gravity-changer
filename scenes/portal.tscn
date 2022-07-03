@@ -95,4 +95,6 @@ anims/idle = SubResource( 3 )
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource( 4 )
 
+[node name="tween" type="Tween" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_portal_body_entered"]

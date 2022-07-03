@@ -12,5 +12,4 @@ func _physics_process(delta: float) -> void:
 
 func _on_FirstBoss_body_entered(body: Node) -> void:
 	if body.name == "Player":
-		if get_tree().reload_current_scene() != OK:
-			print("Algo deu errado!")
+		body.die()

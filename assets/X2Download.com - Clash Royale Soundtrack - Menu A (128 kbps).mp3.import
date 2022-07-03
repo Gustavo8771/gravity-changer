@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/X2Download.com - Clash Royale Soundtrack - Menu A (128 kbps).mp3-a8907376ec4cee7b763e3916795b5973.mp3str"
+
+[deps]
+
+source_file="res://assets/X2Download.com - Clash Royale Soundtrack - Menu A (128 kbps).mp3"
+dest_files=[ "res://.import/X2Download.com - Clash Royale Soundtrack - Menu A (128 kbps).mp3-a8907376ec4cee7b763e3916795b5973.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

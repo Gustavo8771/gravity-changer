@@ -11,12 +11,17 @@ func _physics_process(_delta: float) -> void:
 
 func _on_shoot_body_entered(body: Node) -> void:
 	if body.name == "Player":
-		if get_tree().reload_current_scene() != OK:
-			print("Alguma coisa deu errado!")
-		queue_free()
+		body.die()
+	elif body.name == "tilemap":
+		$timer_morte.start()
+		$texture.hide()
+		$collisionFx.emitting = true
 
 func _on_VisibilityNotifier2D_screen_exited() -> void:
 	queue_free()
 
 func _on_shoot_area_entered(area: Area2D) -> void:
-	if area.name != "trap_atiradora": queue_free()
+	if area.name != "trap_atiradora" and area.name != "collision": queue_free()
+
+func _on_timer_morte_timeout() -> void:
+	queue_free()
