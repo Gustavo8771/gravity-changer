@@ -19,7 +19,8 @@ func take_damage() -> void:
 	life -= 1
 	$texture.modulate = Color(1, 1, 1, 1)
 	if life <= 0:
-		$texture.modulate = Color(1, 0, 0, 1)
+		$texture.modulate = Color(0.87, 0.17, 0.17, 1)
+		queue_free()
 		$dieFx.emitting = true
 		$dieTimer.start()
 		$life_label.text = "0"
@@ -40,7 +41,7 @@ func _on_collision_body_entered(body: Node) -> void:
 		body.die()
 
 func _on_damage_timer_timeout() -> void:
-	$texture.modulate = Color(1, 0, 0, 1)
+	$texture.modulate = Color(0.87, 0.17, 0.17, 1)
 
 func _on_dieTimer_timeout() -> void:
 	queue_free()

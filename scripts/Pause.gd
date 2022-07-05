@@ -14,3 +14,4 @@ func _on_menu_pressed() -> void:
 		print("Algo deu errado!")
 	get_tree().paused = false
 	$Control.hide()
+	Global.save_data()

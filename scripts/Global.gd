@@ -12,7 +12,7 @@ var seconds: int
 var minutes: int
 var zerou: bool
 
-var can_pause
+var can_pause: bool
 
 var save_path: String = "user://save.dat"
 
